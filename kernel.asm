@@ -21,7 +21,7 @@ start:
     call clearscreen
     call askram
 start2:
-    mov ah, 0x9F
+    mov ah, 0x1F
     mov di, 44*2
     mov si, line1
     call print
@@ -70,7 +70,7 @@ print:
     lodsb
     test al, al
     jz done
-    mov ah, 0x9F
+    mov ah, 0x1F
     mov [es:di], ax
     add di, 2
     jmp print
